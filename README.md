@@ -11,3 +11,7 @@ Interaktywna wyszukiwarka filmów korzystająca z zewnętrznego API. Pozwala uż
 ## 🛠️ Technologie
 * **Frontend**: HTML5, CSS3 (Grid, Flexbox)
 * **JavaScript**: ES6+, Fetch API, Async/Await
+
+## 💻 Jak uruchomić
+1. Sklonuj repozytorium.
+2. Otwórz `index.html`.
