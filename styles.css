@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #112145 0%, #1d3b6e 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+}
+select#city-selector {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+select#city-selector option {
+    background: #2a5298;
+    color: white;
+}
+button#get-weather-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ff7e5f; /* Żywy akcent (koralowy) */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+button#get-weather-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
+}
+button#get-weather-btn:active {
+    transform: translateY(1px);
+}
+#weather-info {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+        "icon location"
+        "temp temp"
+        "desc desc"
+        "details details";
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+#weather-info:has([hidden]) {
+    display: none;
+}
+#weather-icon {
+    grid-area: icon;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+#location {
+    grid-area: location;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+#main-temperature {
+    grid-area: temp;
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1;
+    margin: 10px 0;
+}
+#main-temperature::after {
+    content: "°C";
+    font-size: 2rem;
+    vertical-align: super;
+}
+#weather-main {
+    grid-area: desc;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+#feels-like, #humidity, #wind, #wind-gust {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#feels-like { grid-area: details; grid-column: 1 / 2; }
+#humidity   { grid-area: details; grid-column: 2 / 3; }
+#wind       { grid-column: 1 / 2; margin-top: 10px; }
+#wind-gust  { grid-column: 2 / 3; margin-top: 10px; }
+
+#feels-like::before { content: "Odczuwalna"; font-size: 0.7rem; opacity: 0.7; font-weight: 400; text-transform: uppercase;}
+#humidity::before   { content: "Wilgotność"; font-size: 0.7rem; opacity: 0.7; font-weight: 400; text-transform: uppercase;}
+#wind::before       { content: "Wiatr";      font-size: 0.7rem; opacity: 0.7; font-weight: 400; text-transform: uppercase;}
+#wind-gust::before  { content: "Porywy";     font-size: 0.7rem; opacity: 0.7; font-weight: 400; text-transform: uppercase;}
+
+#feels-like::after { content: "°C"; font-size: 0.8em;}
+#humidity::after   { content: "%"; font-size: 0.8em;}
+#wind::after       { content: " km/h"; font-size: 0.8em;} 
+#wind-gust::after  { content: " km/h"; font-size: 0.8em;}
+
+[hidden] {
+    display: none !important;
+}
