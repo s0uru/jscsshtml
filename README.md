@@ -10,3 +10,7 @@ Wyszukiwarka postaci z uniwersum Rick and Morty, charakteryzująca się unikalny
 ## 🛠️ Technologie
 * **Frontend**: HTML5, CSS3 (Animacje hover, efekty glow)
 * **JavaScript**: Asynchroniczne pobieranie danych, renderowanie szablonów HTML
+  
+## 💻 Jak uruchomić
+1. Sklonuj repozytorium.
+2. Otwórz `index.html`.
