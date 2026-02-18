@@ -11,3 +11,7 @@ Interaktywna maszyna perkusyjna łącząca nowoczesny design z obsługą zdarze�
 ## 🛠️ Technologie
 * **Frontend**: HTML5 Audio, CSS3 (Keyframes, Glassmorphism)
 * **JavaScript**: Event Listeners (click, keydown), DOM Manipulation
+
+## 💻 Jak uruchomić
+1. Sklonuj repozytorium.
+2. Otwórz `index.html`.
