@@ -10,3 +10,7 @@ Aplikacja symulująca proces zakupowy w cukierni, skupiająca się na zaawansowa
 ## 🛠️ Technologie
 * **Frontend**: HTML5, CSS3 (zmienne CSS, Flexbox)
 * **JavaScript**: Klasy ES6, metody tablicowe (`reduce`, `forEach`, `find`)
+
+## 💻 Jak uruchomić
+1. Sklonuj repozytorium.
+2. Otwórz `index.html`.
