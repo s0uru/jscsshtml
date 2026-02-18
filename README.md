@@ -10,3 +10,7 @@ Nowoczesna aplikacja pogodowa wykorzystująca efekt Glassmorphism do prezentacji
 ## 🛠️ Technologie
 * **Frontend**: HTML5, CSS3 (Glassmorphism, Grid)
 * **JavaScript**: Async/Await, Fetch API, manipulacja DOM
+
+## 💻 Jak uruchomić
+1. Sklonuj repozytorium.
+2. Otwórz `index.html`.
